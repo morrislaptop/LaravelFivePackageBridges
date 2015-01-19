@@ -13,8 +13,8 @@
         "laravel/framework": "~5.0@dev"
     },
     "autoload": {
-        "psr-0": {
-            "Morrislaptop\\LaravelFivePackageBridges": "src/"
+        "psr-4": {
+            "Morrislaptop\\LaravelFivePackageBridges\\": "src/"
         }
     },
     "suggest": {
