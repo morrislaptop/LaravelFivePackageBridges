@@ -1,5 +1,7 @@
 <?php namespace Morrislaptop\LaravelFivePackageBridges;
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\File;
 use ReflectionClass;
 
 trait LaravelFivePackageBridgeTrait {
@@ -9,7 +11,6 @@ trait LaravelFivePackageBridgeTrait {
 		$this->loadViewsFrom($this->namespace, $this->guessPackagePath() . '/views');
 		$this->loadTranslationsFrom($this->namespace, $this->guessPackagePath() . '/lang');
 		$this->setConfig();
-		$this->app['config']->package($this->vendor . '/' . $this->namespace, $this->guessPackagePath() . '/config', $this->namespace);
 	}
 
 	protected function guessPackagePath() {
@@ -19,8 +20,13 @@ trait LaravelFivePackageBridgeTrait {
 	}
 
 	protected function setConfig() {
-		$config = require $this->guessPackagePath() . '/config/config.php';
-		$this->app['config']->set($this->namespace, $config);
+		$path = $this->guessPackagePath() . '/config/config.php';
+		$files = App::make('files');
+
+		if ( $files->exists($path) ) {
+			$config = require $path;
+			$this->app['config']->set($this->namespace, $config);
+		}
 	}
 
 }
