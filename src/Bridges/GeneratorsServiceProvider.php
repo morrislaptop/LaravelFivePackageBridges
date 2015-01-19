@@ -11,4 +11,14 @@ class GeneratorsServiceProvider extends BaseGeneratorsServiceProvider
 
 	use LaravelFivePackageBridgeTrait;
 
+	protected function setConfig() {
+		$path = $this->guessPackagePath() . '/config/config.php';
+		$config = require $path;
+
+		foreach ($config as $key => $value) {
+			$this->app['config']->set($this->namespace . '::config.' . $key, $value);
+		}
+
+	}
+
 }
