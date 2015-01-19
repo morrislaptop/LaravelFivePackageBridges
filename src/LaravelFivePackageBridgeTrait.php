@@ -1,7 +1,6 @@
 <?php namespace Morrislaptop\LaravelFivePackageBridges;
 
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\File;
 use ReflectionClass;
 
 trait LaravelFivePackageBridgeTrait {

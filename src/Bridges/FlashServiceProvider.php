@@ -5,8 +5,8 @@ use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait;
 
 class FlashServiceProvider extends BaseFlashServiceProvider {
 
-	var $namespace = 'flash';
 	var $vendor = 'laracasts';
+	var $namespace = 'flash';
 
 	use LaravelFivePackageBridgeTrait;
 

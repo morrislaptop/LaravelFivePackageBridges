@@ -6,8 +6,8 @@ use Way\Generators\GeneratorsServiceProvider as BaseGeneratorsServiceProvider;
 class GeneratorsServiceProvider extends BaseGeneratorsServiceProvider
 {
 
-	var $namespace = 'generators';
 	var $vendor = 'way';
+	var $namespace = 'generators';
 
 	use LaravelFivePackageBridgeTrait;
 
