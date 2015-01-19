@@ -5,7 +5,7 @@ This Laravel package provides a bridging trait and multiple bridges that allows 
 Current packages that are bridged are:
 
 * [laracasts/flash](https://github.com/laracasts/flash)
-1. [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
+* [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
 
 If you have a package you want added to the bridges, please submit a pull request.
 
@@ -19,7 +19,8 @@ Once this operation completes, the final step is to add the bridged service prov
 
 Open app/config/app.php, and add lines as appropriate.
 
-	'Morrislaptop\LaravelFivePackageBridges\Bridges\FlashServiceProvider', 	'Morrislaptop\LaravelFivePackageBridges\Bridges\GeneratorsServiceProvider'
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\FlashServiceProvider', 
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\GeneratorsServiceProvider'
 
 Voila! Those packages now work as they always did in Laravel 4.
 
@@ -28,5 +29,17 @@ Voila! Those packages now work as they always did in Laravel 4.
 If you have a private package you can simply create your own bridging service provider and bring in the trait from this package.
 
 ```php
-<?php namespace App\Bridges;  use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait; use Acme\Private\NuclearServiceProvider as BaseNuclearServiceProvider;  class NuclearServiceProvider extends BaseNuclearServiceProvider {  	var $namespace = 'nuclear'; 	var $vendor = 'acme';  	use LaravelFivePackageBridgeTrait;  }
+<?php namespace App\Bridges;  
+
+use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait; 
+use Acme\Private\NuclearServiceProvider as BaseNuclearServiceProvider;
+
+  class NuclearServiceProvider extends BaseNuclearServiceProvider  {  
+
+	var $vendor = 'acme';  
+	var $namespace = 'nuclear'; 
+
+	use LaravelFivePackageBridgeTrait;  
+}
+
 ```
