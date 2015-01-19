@@ -1,0 +1,24 @@
+{
+    "name": "morrislaptop/laravel-five-package-bridges",
+    "description": "Use your Laravel 4 packages in Laravel 5",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Craig Morris",
+            "email": "craig.michael.morris@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/framework": "~5.0@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Morrislaptop\\LaravelFivePackageBridges": "src/"
+        }
+    },
+    "suggest": {
+        "laracasts/flash": "Allows easy flash messaging",
+        "way/generators": "Fast generation of Laravel framework components"
+    }
+}
