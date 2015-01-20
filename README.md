@@ -6,6 +6,7 @@ Current packages that are bridged are:
 
 * [laracasts/flash](https://github.com/laracasts/flash)
 * [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
+* [intervention/image](https://github.com/Intervention/image)
 
 If you have a package you want added to the bridges, please submit a pull request.
 
@@ -15,12 +16,13 @@ Begin by installing this package through Composer.
 
 	composer require morrislaptop/laravel-five-package-bridges
 
-Once this operation completes, the final step is to add the bridged service providers instead of the raw service providers. 
+Once this operation completes, the final step is to add the bridged service providers instead of the raw service providers.
 
 Open app/config/app.php, and add lines as appropriate.
 
 	'Morrislaptop\LaravelFivePackageBridges\Bridges\FlashServiceProvider', 
-	'Morrislaptop\LaravelFivePackageBridges\Bridges\GeneratorsServiceProvider'
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\GeneratorsServiceProvider',
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\ImageServiceProvider'
 
 Voila! Those packages now work as they always did in Laravel 4.
 

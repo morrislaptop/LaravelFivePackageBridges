@@ -54,6 +54,12 @@ trait LaravelFivePackageBridgeTrait {
 		return $namespace;
 	}
 
+	/**
+	 * Load configuration file and set into config repo
+	 *
+	 * @param $namespace
+	 * @param $path
+	 */
 	protected function loadConfigsFrom($namespace, $path) {
 		if ( $this->app['files']->exists($path) ) {
 			$config = require $path;
@@ -61,6 +67,12 @@ trait LaravelFivePackageBridgeTrait {
 		}
 	}
 
+	/**
+	 * Set configuration values with namespace
+	 *
+	 * @param $namespace
+	 * @param $config
+	 */
 	protected function setConfigs($namespace, $config) {
 		foreach ($config as $key => $value) {
 			$this->app['config']->set($namespace . '::' . $key, $value);
