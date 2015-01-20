@@ -3,22 +3,20 @@
 use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait;
 use Way\Generators\GeneratorsServiceProvider as BaseGeneratorsServiceProvider;
 
-class GeneratorsServiceProvider extends BaseGeneratorsServiceProvider
-{
-
-	var $vendor = 'way';
-	var $namespace = 'generators';
-
+class GeneratorsServiceProvider extends BaseGeneratorsServiceProvider {
 	use LaravelFivePackageBridgeTrait;
 
-	protected function setConfig() {
-		$path = $this->guessPackagePath() . '/config/config.php';
-		$config = require $path;
-
+	/**
+	 * Override trait to add the config. prefix
+	 *
+	 * @param $namespace
+	 * @param $config
+	 */
+	protected function setConfigs($namespace, $config)
+	{
 		foreach ($config as $key => $value) {
-			$this->app['config']->set($this->namespace . '::config.' . $key, $value);
+			$this->app['config']->set($namespace . '::config.' . $key, $value);
 		}
-
 	}
 
 }

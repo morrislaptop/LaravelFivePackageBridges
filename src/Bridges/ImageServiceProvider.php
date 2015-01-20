@@ -1,8 +1,8 @@
 <?php namespace Morrislaptop\LaravelFivePackageBridges\Bridges;
 
-use Laracasts\Flash\FlashServiceProvider as BaseFlashServiceProvider;
+use Intervention\Image\ImageServiceProvider as BaseImageServiceProvider;
 use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait;
 
-class FlashServiceProvider extends BaseFlashServiceProvider {
+class ImageServiceProvider extends BaseImageServiceProvider {
 	use LaravelFivePackageBridgeTrait;
 }
