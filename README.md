@@ -16,7 +16,12 @@ Begin by installing this package through Composer.
 
 	composer require morrislaptop/laravel-five-package-bridges
 
-Once this operation completes, the final step is to add the bridged service providers instead of the raw service providers.
+Once this operation completes, add the config service provider, this brings the package() method back
+to the config repository. Open app/config/app.php and add..
+
+	'Morrislaptop\LaravelFivePackageBridges\ConfigServiceProvider',
+
+The final step is to add the bridged service providers instead of the raw service providers.
 
 Open app/config/app.php, and add lines as appropriate.
 

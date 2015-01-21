@@ -1,6 +1,5 @@
 <?php namespace Morrislaptop\LaravelFivePackageBridges;
 
-use Illuminate\Support\Facades\App;
 use ReflectionClass;
 
 /**
@@ -9,7 +8,6 @@ use ReflectionClass;
  * Provide functions to backport methods removed from
  *
  * - https://github.com/laravel/framework/commit/3a0afc20f25ad3bed640ff1a14957f972d123cf7#commitcomment-8863884
- * - https://github.com/laravel/framework/commit/64c15a35d9578748671639748b83b21d16dbd6c2#diff-2
  *
  * @package Morrislaptop\LaravelFivePackageBridges
  */
@@ -20,7 +18,7 @@ trait LaravelFivePackageBridgeTrait {
 		$namespace = $this->getPackageNamespace($package, $namespace);
 		$path = $path ?: $this->guessPackagePath();
 
-		$this->loadConfigsFrom($namespace, $path . '/config/config.php');
+		$this->loadConfigsFrom($namespace, $path . '/config', $package);
 		$this->loadViewsFrom($namespace, $path . '/views');
 		$this->loadTranslationsFrom($namespace, $path . '/lang');
 
@@ -59,24 +57,10 @@ trait LaravelFivePackageBridgeTrait {
 	 *
 	 * @param $namespace
 	 * @param $path
+	 * @param $package
 	 */
-	protected function loadConfigsFrom($namespace, $path) {
-		if ( $this->app['files']->exists($path) ) {
-			$config = require $path;
-			$this->setConfigs($namespace, $config);
-		}
-	}
-
-	/**
-	 * Set configuration values with namespace
-	 *
-	 * @param $namespace
-	 * @param $config
-	 */
-	protected function setConfigs($namespace, $config) {
-		foreach ($config as $key => $value) {
-			$this->app['config']->set($namespace . '::' . $key, $value);
-		}
+	protected function loadConfigsFrom($namespace, $path, $package) {
+		$this->app['config']->package($package, $path, $namespace);
 	}
 
 }
