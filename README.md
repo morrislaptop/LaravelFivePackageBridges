@@ -42,10 +42,6 @@ use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait; 
 use Acme\Private\NuclearServiceProvider as BaseNuclearServiceProvider;
 
   class NuclearServiceProvider extends BaseNuclearServiceProvider  {  
-
-	var $vendor = 'acme';  
-	var $namespace = 'nuclear'; 
-
 	use LaravelFivePackageBridgeTrait;  
 }
 
