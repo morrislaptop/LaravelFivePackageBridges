@@ -10,7 +10,7 @@ Current packages that are bridged are:
 * [maatwebsite/excel](https://github.com/Maatwebsite/Laravel-Excel)
 * [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
 
-If you have a package you want added to the bridges, please submit a pull request.
+If you want to build a bridge, please follow the [contributing guide](CONTRIBUTING.md).
 
 # Installation
 
