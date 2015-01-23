@@ -1,8 +1,8 @@
 <?php namespace Morrislaptop\LaravelFivePackageBridges\Bridges;
 
-use Clockwork\Support\Laravel\ClockworkServiceProvider as BaseImageServiceProvider;
+use Clockwork\Support\Laravel\ClockworkServiceProvider as BaseClockworkServiceProvider;
 use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait;
 
-class ClockworkServiceProvider extends BaseImageServiceProvider {
+class ClockworkServiceProvider extends BaseClockworkServiceProvider {
 	use LaravelFivePackageBridgeTrait;
 }

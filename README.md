@@ -7,6 +7,8 @@ Current packages that are bridged are:
 * [laracasts/flash](https://github.com/laracasts/flash)
 * [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
 * [intervention/image](https://github.com/Intervention/image)
+* [maatwebsite/excel](https://github.com/Maatwebsite/Laravel-Excel)
+* [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
 
 If you have a package you want added to the bridges, please submit a pull request.
 
@@ -21,13 +23,32 @@ to the config repository. Open app/config/app.php and add..
 
 	'Morrislaptop\LaravelFivePackageBridges\ConfigServiceProvider',
 
+Then we need to swap the core Application class with the bridging, this adds various methods like after()
+back. Open bootstrap/app.php and replace..
+
+```php
+$app = new Illuminate\Foundation\Application(
+    realpath(__DIR__.'/../')
+);
+```
+
+with
+
+```php
+$app = new Morrislaptop\LaravelFivePackageBridges\Application(
+    realpath(__DIR__.'/../')
+);
+```
+
 The final step is to add the bridged service providers instead of the raw service providers.
 
 Open app/config/app.php, and add lines as appropriate.
 
 	'Morrislaptop\LaravelFivePackageBridges\Bridges\FlashServiceProvider', 
 	'Morrislaptop\LaravelFivePackageBridges\Bridges\GeneratorsServiceProvider',
-	'Morrislaptop\LaravelFivePackageBridges\Bridges\ImageServiceProvider'
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\ImageServiceProvider',
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\ExcelServiceProvider',
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\ClockworkServiceProvider',
 
 Voila! Those packages now work as they always did in Laravel 4.
 
@@ -46,3 +67,9 @@ use Acme\Private\NuclearServiceProvider as BaseNuclearServiceProvider;
 }
 
 ```
+
+# Contributing
+
+Please see the [contributing guide](CONTRIBUTING.md). 
+
+
