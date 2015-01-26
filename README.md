@@ -9,6 +9,7 @@ Current packages that are bridged are:
 * [intervention/image](https://github.com/Intervention/image)
 * [maatwebsite/excel](https://github.com/Maatwebsite/Laravel-Excel)
 * [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
+* [cartalyst/sentry](https://github.com/cartalyst/sentry)
 
 If you want to build a bridge, please follow the [contributing guide](CONTRIBUTING.md).
 
@@ -49,6 +50,7 @@ Open app/config/app.php, and add lines as appropriate.
 	'Morrislaptop\LaravelFivePackageBridges\Bridges\ImageServiceProvider',
 	'Morrislaptop\LaravelFivePackageBridges\Bridges\ExcelServiceProvider',
 	'Morrislaptop\LaravelFivePackageBridges\Bridges\ClockworkServiceProvider',
+	'Morrislaptop\LaravelFivePackageBridges\Bridges\SentryServiceProvider',
 
 Voila! Those packages now work as they always did in Laravel 4.
 

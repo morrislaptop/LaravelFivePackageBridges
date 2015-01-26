@@ -19,7 +19,8 @@
         "way/generators": "~3.0",
         "intervention/image": "~2.0",
         "maatwebsite/excel": "~1.2",
-        "itsgoingd/clockwork": "~1.6"
+        "itsgoingd/clockwork": "~1.6",
+        "cartalyst/sentry": "~2.1"
     },
     "autoload": {
         "psr-4": {
@@ -31,6 +32,7 @@
         "way/generators": "Rapidly speed up your Laravel workflow with generators https://packagist.org/packages/way/generators",
         "intervention/image": "PHP Image Manipulation http://image.intervention.io",
         "maatwebsite/excel": "An eloquent way of importing and exporting Excel and CSV files for Laravel with the power of PHPExcel http://www.maatwebsite.nl/laravel-excel/docs",
-        "itsgoingd/clockwork": "Server-side component of Clockwork, a Chrome extension for PHP development."
+        "itsgoingd/clockwork": "Server-side component of Clockwork, a Chrome extension for PHP development.",
+        "cartalyst/sentry": "A framework agnostic authentication & authorization system. http://www.cartalyst.com"
     }
 }
