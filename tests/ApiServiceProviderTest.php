@@ -1,12 +1,14 @@
 <?php
 
-class SentryServiceProviderTest extends Orchestra\Testbench\TestCase {
+use Morrislaptop\LaravelFivePackageBridges\Application;
+
+class ApiServiceProviderTest extends Orchestra\Testbench\TestCase {
 
 	protected function getPackageProviders($application)
 	{
 		return [
 			'Morrislaptop\LaravelFivePackageBridges\ConfigServiceProvider',
-			'Morrislaptop\LaravelFivePackageBridges\Bridges\SentryServiceProvider'
+			'Morrislaptop\LaravelFivePackageBridges\Bridges\ApiServiceProvider'
 		];
 	}
 
