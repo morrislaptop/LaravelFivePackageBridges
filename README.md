@@ -1,5 +1,7 @@
 # Laravel Five Package Bridges
 
+[![Build Status](https://travis-ci.org/morrislaptop/LaravelFivePackageBridges.svg?branch=master)](https://travis-ci.org/morrislaptop/LaravelFivePackageBridges)
+
 This Laravel package provides a bridging trait and multiple bridges that allows Laravel 4 packages to be used in Laravel 5.
 
 Current packages that are bridged are:
