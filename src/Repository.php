@@ -24,6 +24,7 @@ class Repository extends IlluminateRepository
 
 		try {
 			$this->loadConfigurationFiles($hint, $namespace);
+			$this->loadConfigurationFiles(base_path() . '/config/packages/' . $package, $namespace);
 		}
 		catch (\InvalidArgumentException $e) {
 			// config directory doesn't exist, ignore..
