@@ -8,9 +8,9 @@
             "email": "craig.michael.morris@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "laravel/framework": "~5.0@dev"
+        "laravel/framework": "~5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.4",
@@ -22,7 +22,7 @@
         "itsgoingd/clockwork": "~1.6",
         "cartalyst/sentry": "~2.1",
         "robbiep/cloudconvert-laravel": "2.0.1-beta",
-        "camroncade/timezone": "dev-master",
+        "camroncade/timezone": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -37,6 +37,6 @@
         "itsgoingd/clockwork": "Server-side component of Clockwork, a Chrome extension for PHP development.",
         "cartalyst/sentry": "A framework agnostic authentication & authorization system. http://www.cartalyst.com",
         "robbiep/cloudconvert-laravel": "Provides API access to CloudConvert.com",
-        "camroncade/timezone": "Addon to assist with Timezone managemenr",
+        "camroncade/timezone": "Addon to assist with Timezone managemenr"
     }
 }
