@@ -23,7 +23,6 @@
         "cartalyst/sentry": "~2.1",
         "robbiep/cloudconvert-laravel": "2.0.1-beta",
         "camroncade/timezone": "dev-master",
-        "laracasts/utilities": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -39,6 +38,5 @@
         "cartalyst/sentry": "A framework agnostic authentication & authorization system. http://www.cartalyst.com",
         "robbiep/cloudconvert-laravel": "Provides API access to CloudConvert.com",
         "camroncade/timezone": "Addon to assist with Timezone managemenr",
-        "laracasts/utilities": "Laracast utility to push data to Javascript vars"
     }
 }
