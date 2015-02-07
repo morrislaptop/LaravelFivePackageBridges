@@ -1,0 +1,8 @@
+<?php namespace Morrislaptop\LaravelFivePackageBridges\Bridges;
+
+use RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider as BaseCloudConvertLaravelServiceProvider;
+use Morrislaptop\LaravelFivePackageBridges\LaravelFivePackageBridgeTrait;
+
+class CloudConvertLaravelServiceProvider extends BaseCloudConvertLaravelServiceProvider {
+	use LaravelFivePackageBridgeTrait;
+}

@@ -8,7 +8,7 @@
             "email": "craig.michael.morris@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "laravel/framework": "~5.0@dev"
     },
@@ -20,7 +20,9 @@
         "intervention/image": "~2.0",
         "maatwebsite/excel": "~1.2",
         "itsgoingd/clockwork": "~1.6",
-        "cartalyst/sentry": "~2.1"
+        "cartalyst/sentry": "~2.1",
+        "robbiep/cloudconvert-laravel": "2.0.1-beta",
+        "camroncade/timezone": "dev-master",
     },
     "autoload": {
         "psr-4": {
@@ -33,6 +35,8 @@
         "intervention/image": "PHP Image Manipulation http://image.intervention.io",
         "maatwebsite/excel": "An eloquent way of importing and exporting Excel and CSV files for Laravel with the power of PHPExcel http://www.maatwebsite.nl/laravel-excel/docs",
         "itsgoingd/clockwork": "Server-side component of Clockwork, a Chrome extension for PHP development.",
-        "cartalyst/sentry": "A framework agnostic authentication & authorization system. http://www.cartalyst.com"
+        "cartalyst/sentry": "A framework agnostic authentication & authorization system. http://www.cartalyst.com",
+        "robbiep/cloudconvert-laravel": "Provides API access to CloudConvert.com",
+        "camroncade/timezone": "Addon to assist with Timezone managemenr",
     }
 }
