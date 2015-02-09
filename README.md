@@ -14,7 +14,7 @@ Current packages that are bridged are:
 * [cartalyst/sentry](https://github.com/cartalyst/sentry)
 * [robbiep/cloudconvert-laravel](https://github.com/robbiepaul/cloudconvert-laravel)
 * [camroncade/timezone](https://github.com/camroncade/timezone)
-* [laracasts/utilities]https://github.com/laracasts/PHP-Vars-To-Js-Transformer)
+* [laracasts/utilities](https://github.com/laracasts/PHP-Vars-To-Js-Transformer)
 
 If you want to build a bridge, please follow the [contributing guide](CONTRIBUTING.md).
 
