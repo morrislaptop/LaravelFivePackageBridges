@@ -19,8 +19,8 @@ trait LaravelFivePackageBridgeTrait {
 		$path = $path ?: $this->guessPackagePath();
 
 		$this->loadConfigsFrom($namespace, $path . '/config', $package);
-		$this->loadViewsFrom($namespace, $path . '/views');
-		$this->loadTranslationsFrom($namespace, $path . '/lang');
+		$this->loadViewsFrom($path . '/views', $namespace);
+		$this->loadTranslationsFrom($path . '/lang', $namespace);
 
 	}
 
