@@ -21,8 +21,11 @@
         "maatwebsite/excel": "~1.2",
         "itsgoingd/clockwork": "~1.6",
         "cartalyst/sentry": "~2.1",
-        "robbiep/cloudconvert-laravel": "2.0.1-beta",
+        "robbiep/cloudconvert-laravel": "~2.0@beta",
         "camroncade/timezone": "dev-master"
+    },
+    "replace": {
+        "illuminate/support": "~4.2"
     },
     "autoload": {
         "psr-4": {
