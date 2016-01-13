@@ -30,7 +30,7 @@ class ConfigServiceProvider extends ServiceProvider {
 	{
 		$configs = $this->app['config']->all();
 
-		$this->app->bindShared('config', function () use ($configs) {
+		$this->app->singleton('config', function () use ($configs) {
 			$config = new Repository($configs);
 			return $config;
 		});
